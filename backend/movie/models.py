@@ -42,12 +42,12 @@ class Movie(models.Model):
     name              =     models.CharField(max_length=50)
     cast              =     models.CharField(max_length=100)
     director          =     models.CharField(max_length=20)
-    language          =     models.CharField(max_length=10,choices=lang_choice)
-    run_length        =     models.IntegerField(help_text='Enter run length in minutes')
-    certificate       =     models.CharField(max_length=2,choices=rating_choice)
-    popularity_index  =     models.IntegerField(unique=True,null=True,blank=True)
-    trailer           =     models.URLField(blank=True)    
-    image             =     models.ImageField(null=True, blank=True)
+    language          =     models.CharField(max_length=10,choices=lang_choice, blank=True)
+    run_length        =     models.IntegerField(help_text='Enter run length in minutes', blank=True)
+    certificate       =     models.CharField(max_length=2,choices=rating_choice, blank=True)
+    popularity_index  =     models.IntegerField(unique=True,null=True)
+    trailer           =     models.CharField(max_length=200, default="youtube.com")    
+    image             =     models.ImageField(null=True)
     
     objects = MovieManager()
 

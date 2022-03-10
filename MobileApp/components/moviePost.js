@@ -9,12 +9,12 @@ export default class moviePost extends Component {
   constructor(props){
     super(props)
     this.state={
-      name:'',
-      cast:'',
-      director:'',
-      language:'',
-      certificate:'',
-      run_length:'',    }
+      name:'A',
+      cast:'B',
+      director:'C',
+      language:'ENGLISH',
+      certificate:'U',
+      run_length: 120,    }
   }
   
   Submit(){
@@ -34,7 +34,7 @@ export default class moviePost extends Component {
 
     axios({
         method: 'POST',
-        url: 'http://172.20.10.9/api/movie/',
+        url: 'http://172.20.10.9/api/v1/movie/',
         data: article,
         headers:{
           "Content-Type":"application/json",

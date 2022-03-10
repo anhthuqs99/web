@@ -9,22 +9,24 @@ export default class theatrePost extends Component {
   constructor(props){
     super(props)
     this.state={
-      name:'',
-      city:'',
-      address:'',
-      no_of_screen:'',
+      name:'A',
+      city:'B',
+      address:'C',
+      no_of_screen:2,
+      admin_id:1,
     }
   }
   Submit(){
     console.log(this.state.name);
     console.log(this.state.city);
     console.log(this.state.address);
-    console.lo(this.state.no_of_screen);
+    console.log(this.state.no_of_screen);
     // Simple POST request with a JSON body using axios
     const article = { name: this.state.name,
                       city: this.state.city,
                       address: this.state.address,
-                      no_of_screen: this.state.no_of_screen}
+                      no_of_screen: this.state.no_of_screen,
+                      admin_id: this.state.admin_id}
 
     axios({
         method: 'POST',

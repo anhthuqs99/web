@@ -14,9 +14,9 @@ class MovieSerializer(serializers.ModelSerializer):
         model = Movie
         fields = ('name', 'cast', 'director', 'language', 'run_length', 'certificate', 'popularity_index', 'trailer', 'image')
     
-    def create(self, validated_data):
-        movie = super.create(validated_data)
-        return movie
+    # def create(self, validated_data):
+    #     movie = super.create(validated_data)
+    #     return movie
 
 class TheatreSerializer(serializers.ModelSerializer):
     class Meta:
